@@ -17,10 +17,26 @@
    },
    {
       "id": 3,
-      "integer": "12",
+      "integer": "123",
       "string": "Super sekali",
       "float": "1.45",
+      "date": "2023-06-05",
+      "boolean": "true"
+   },
+   {
+      "id": 4,
+      "integer": "12",
+      "string": "gilang",
+      "float": "100.405",
       "date": "kosong",
       "boolean": "false"
+   },
+   {
+      "id": 5,
+      "integer": "1231",
+      "string": "zxcxzc",
+      "float": "21.3",
+      "date": "2023-05-28",
+      "boolean": "true"
    }
 ]
