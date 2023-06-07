@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BREAD</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1>BREAD ( Browse, Read, Edit, Add, Delete )</h1>
+    <h2>Filters</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-20">
+                <label for="id">ID</label>
+            </div>
+            <div class="col-80">
+                <input type="text" id="id" name="id" placeholder="ID">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-20">
+                <label for="string">String</label>
+            </div>
+            <div class="col-80">
+                <input type="text" id="string" name="string" placeholder="String">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-20">
+                <label for="integer">Integer</label>
+            </div>
+            <div class="col-80">
+                <input type="text" id="integer" name="integer" placeholder="Integer">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-20">
+                <label for="float">Float</label>
+            </div>
+            <div class="col-80">
+                <input type="text" id="float" name="float" placeholder="Float">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-20">
+                <label for="date">Date</label>
+            </div>
+            <div class="col-80">
+                <div class="tanggal">
+                    <input type="datetime" id="startDate" name="startDate" placeholder="start date">
+                    <div class="dtTo">to</div>
+                    <input type="datetime" id="endDate" name="endDate" placeholder="end date">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-20">
+                <label for="Boolean">Boolean</label>
+            </div>
+            <div class="col-80">
+                <select name="boolean" id="boolean">
+                    <option value="">Choose the boolean...</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <button class="search">Search</button>
+        </div>
+    </div>
+    <div class="table">
+        <table id="table">
+            <tr>
+                <th>ID</th>
+                <th>String</th>
+                <th>Integer</th>
+                <th>Float</th>
+                <th>Date</th>
+                <th>Boolean</th>
+                <th>Actions</th>
+            </tr>
+            <% data.forEach((item)=> { %>
+                <tr>
+                    <td>
+                        <%= item.id %>
+                    </td>
+                    <td>
+                        <%= item.string %>
+                    </td>
+                    <td>
+                        <%= item.integer %>
+                    </td>
+                    <td>
+                        <%= item.float %>
+                    </td>
+                    <td>
+                        <%= item.date %>
+                    </td>
+                    <td>
+                        <%= item.boolean %>
+                    </td>
+                    <td>
+                        <a class="edit" href="/edit/<%= item.id %>">Edit</a>
+                        <a class="delete" href="/delete/<%= item.id %>">Delete</a>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+        <div class="row">
+            <a class="search" href="/add">Add</a>
+        </div>
+    </div>
+</body>
+
+</html>

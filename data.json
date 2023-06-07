@@ -1,0 +1,26 @@
+[
+   {
+      "id": "1",
+      "integer": "1211",
+      "string": "testing datas",
+      "float": "1.45",
+      "date": "2017-12-12",
+      "boolean": "true"
+   },
+   {
+      "id": 2,
+      "integer": "99",
+      "string": "coba lagi",
+      "float": "100.405",
+      "date": "2017-11-12",
+      "boolean": "false"
+   },
+   {
+      "id": 3,
+      "integer": "12",
+      "string": "Super sekali",
+      "float": "1.45",
+      "date": "kosong",
+      "boolean": "false"
+   }
+]
