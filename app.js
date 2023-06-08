@@ -62,7 +62,7 @@ app.get('/edit/:id', (req, res) => {
       item["string"] = data[i].string
       item["integer"] = data[i].integer
       item["float"] = data[i].float
-      item["date"] = data[i].date ? req.body.date : "kosong",
+      item["date"] = data[i].date,
       item["boolean"] = data[i].boolean
     }
   }
@@ -73,7 +73,6 @@ app.post('/edit/:id', (req, res) => {
   const id = req.params.id
   for(i = 0; i < data.length; i++){
     if(data[i].id == id ){
-      data[i].id = id
       data[i].string = req.body.string
       data[i].integer = req.body.integer
       data[i].float = req.body.float
